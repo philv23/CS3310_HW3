@@ -3,11 +3,17 @@ public class MyBestHashMap {
 	
 	public LinkedList[] hashList = new LinkedList[10];
 	
+	public void intializeArray() {
+		for(int i = 0; i < hashList.length; i++) {
+			hashList[i] = new LinkedList();
+		}
+	}
+	
 	public void add(String k) {
 		int x = stringHash(k);
 		int n = x % 10;
 		
-		hashList[n].insertFirst(x);
+		hashList[n].insertLast(x);
 	}
 	
 	int stringHash(String s) {
