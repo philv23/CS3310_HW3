@@ -31,7 +31,7 @@ public class WMUSearchEngine {
 		Scanner scan2 = new Scanner(System.in);
 		String d = "";
 		ArrayList<String> strings = new ArrayList<String>();
-		Stack stack1 = new Stack();
+		ArrayList<String> stack1 = new ArrayList<String>();
 		int x = 0;
 		int z = 0;
 
@@ -40,6 +40,7 @@ public class WMUSearchEngine {
 			System.out.print(">");
 			d = scan2.next();
 			if (d.contains("&&")) {
+				stack1.add(d);
 				for (int u = 0; u < map.size(); u++) {
 					int num = 0;
 					map2 = map.get(u);
@@ -55,6 +56,7 @@ public class WMUSearchEngine {
 				strings.clear();
 
 			} else if (d.contains("||")) {
+				stack1.add(d);
 				for (int u = 0; u < map.size(); u++) {
 					int num = 0;
 					map2 = map.get(u);
@@ -73,7 +75,7 @@ public class WMUSearchEngine {
 
 			} else {
 				strings.add(d);
-				stack1.push(d);
+				stack1.add(d);
 			}
 		}
 		scan2.close();
