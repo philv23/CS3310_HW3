@@ -37,6 +37,7 @@ public class WMUSearchEngine {
 
 		MyBestHashMap map2;
 		while (!d.contains("!")) {
+			System.out.print(">");
 			d = scan2.next();
 			if (d.contains("&&")) {
 				for (int u = 0; u < map.size(); u++) {
