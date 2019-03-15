@@ -1,6 +1,6 @@
 
 public class Node<E> {
-	private E dataValue;
+	public E dataValue;
 	Node<E> nextNode;
 	public Node next;
 

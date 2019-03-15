@@ -108,4 +108,15 @@ public class LinkedList<E> {
 			return false;
 		}
 	}
+
+	public boolean search(int x) {
+		Node current = head; // Initialize current
+		while (current != null) {
+			if ((int) current.dataValue == x) {
+				return true; // data found
+			}
+			current = current.next;
+		}
+		return false; // data not found
+	}
 }
