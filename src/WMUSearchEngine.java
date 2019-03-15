@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class WMUSearchEngine {
 
 	public static void main(String args[]) throws FileNotFoundException {
-
+		
+		long mapTime1 = System.nanoTime();
 		ArrayList<MyBestHashMap> map = new ArrayList<MyBestHashMap>();
 		File file = new File(args[0]);
 		Scanner scan1 = new Scanner(file);
@@ -26,6 +27,15 @@ public class WMUSearchEngine {
 			}
 		}
 		scan1.close();
+		long mapTime2 = System.nanoTime();
+		
+		double convert = 1000000;
+		double mapTimeTotal = mapTime2 - mapTime1;
+		mapTimeTotal = mapTimeTotal / convert;
+		/*System.out.printf(
+				"\nTime for executing operations in the sequence: %.2f ms",
+				mapTimeTotal);*/
+		
 		System.out.println("Index Created");
 
 		Scanner scan2 = new Scanner(System.in);
