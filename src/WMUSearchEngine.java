@@ -8,7 +8,7 @@ public class WMUSearchEngine {
 	public static void main(String args[]) throws FileNotFoundException {
 
 		ArrayList<MyBestHashMap> map = new ArrayList<MyBestHashMap>();
-		File file = new File("url.txt");
+		File file = new File(args[0]);
 		Scanner scan1 = new Scanner(file);
 		int j = -1;
 		while (scan1.hasNext()) {
@@ -75,7 +75,7 @@ public class WMUSearchEngine {
 				stack1.push(d);
 			}
 		}
-
+		scan2.close();
 	}
 
 }
